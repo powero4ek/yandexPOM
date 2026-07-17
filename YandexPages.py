@@ -30,3 +30,9 @@ class SearchHelper(BasePage):
     search_field.send_keys(word)
 
     return search_field
+    
+    def click_search_button(self):
+
+    self.click_element(
+        YandexSearchLocators.LOCATOR_YANDEX_SEARCH_BUTTON
+    )
