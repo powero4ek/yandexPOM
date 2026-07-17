@@ -11,14 +11,12 @@ class YandexSearchLocators:
 
 class SearchHelper(BasePage):
 
-from selenium.webdriver.common.keys import Keys
-
-def enter_word(self, word):
-    search_field = self.find_element(YandexSearchLocators.LOCATOR_YANDEX_SEARCH_FIELD)
-
-    search_field.clear()
-    search_field.send_keys(word)
-    search_field.send_keys(Keys.ENTER)
+    def enter_word(self, word):
+        search_field = self.find_element(YandexSearchLocators.LOCATOR_YANDEX_SEARCH_FIELD)
+    
+        search_field.clear()
+        search_field.send_keys(word)
+        search_field.send_keys(Keys.ENTER)
     # def enter_word(self, word):
 
     #     search_field = self.find_element(YandexSearchLocators.LOCATOR_YANDEX_SEARCH_FIELD)
