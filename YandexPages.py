@@ -21,18 +21,18 @@ class SearchHelper(BasePage):
 
     def enter_word(self, word):
 
-    search_field = self.find_element(
-        YandexSearchLocators.LOCATOR_YANDEX_SEARCH_FIELD
-    )
+        search_field = self.find_element(
+            YandexSearchLocators.LOCATOR_YANDEX_SEARCH_FIELD
+        )
 
-    search_field.click()
-    search_field.clear()
-    search_field.send_keys(word)
+        search_field.click()
 
-    return search_field
-    
-    def click_search_button(self):
+        search_field.clear()
 
-    self.click_element(
-        YandexSearchLocators.LOCATOR_YANDEX_SEARCH_BUTTON
-    )
+        search_field.send_keys(word)
+
+        print("В поле поиска:", search_field.get_attribute("value"))
+
+        search_field.send_keys(Keys.ENTER)
+
+        return search_field
