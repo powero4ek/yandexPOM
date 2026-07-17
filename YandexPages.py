@@ -6,7 +6,15 @@ import time
 
 class YandexSearchLocators:
 
-    LOCATOR_YANDEX_SEARCH_FIELD = (By.NAME,"text")
+    LOCATOR_YANDEX_SEARCH_FIELD = (
+        By.NAME,
+        "text"
+    )
+
+    LOCATOR_YANDEX_SEARCH_BUTTON = (
+        By.CSS_SELECTOR,
+        "button[type='submit']"
+    )
 
 
 class SearchHelper(BasePage):
