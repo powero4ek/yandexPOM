@@ -20,21 +20,13 @@ class YandexSearchLocators:
 class SearchHelper(BasePage):
 
     def enter_word(self, word):
-        search_field = self.find_element(YandexSearchLocators.LOCATOR_YANDEX_SEARCH_FIELD)
-    
-        search_field.clear()
-        search_field.send_keys(word)
-        search_field.send_keys(Keys.ENTER)
-    # def enter_word(self, word):
 
-    #     search_field = self.find_element(YandexSearchLocators.LOCATOR_YANDEX_SEARCH_FIELD)
+    search_field = self.find_element(
+        YandexSearchLocators.LOCATOR_YANDEX_SEARCH_FIELD
+    )
 
-    #     search_field.click()
+    search_field.click()
+    search_field.clear()
+    search_field.send_keys(word)
 
-    #     search_field.clear()
-
-    #     search_field.send_keys(word)
-
-    #     time.sleep(1)
-
-    #     search_field.send_keys(Keys.ENTER)
+    return search_field
